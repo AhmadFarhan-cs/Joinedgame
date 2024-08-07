@@ -6,19 +6,20 @@ extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready() -> void:
 	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(delta) -> void:
 	if Input.is_action_just_pressed("switch"):
-		var temp = character_a.global_position
-		character_a.global_position=character_b.global_position
-		character_b.global_position = temp
+		var temp = character_a.global_position.y
+		character_a.global_position.y=character_b.global_position.y
+		character_b.global_position.y = temp
 		switch()
+		
 
-func switch():
+func switch() -> void:
 	if Playerstates.switched==false:
 		Playerstates.switched= true
 	else:

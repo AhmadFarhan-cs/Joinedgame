@@ -12,7 +12,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
 	# Add the gravity.
-	if Playerstates.switched == false:
+	if not Playerstates.switched:
 		JUMP_VELOCITY = -400
 		sprite_2d.flip_v=false
 		if not is_on_floor():
