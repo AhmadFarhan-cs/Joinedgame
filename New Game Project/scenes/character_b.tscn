@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6bd1xnmp2ps4"]
+
+[ext_resource type="Script" path="res://Character B.gd" id="1_pf50e"]
+[ext_resource type="Texture2D" uid="uid://con7sv51wk2ew" path="res://icon.svg" id="2_jdo6c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2sw3"]
+size = Vector2(128, 116)
+
+[node name="Character B" type="CharacterBody2D"]
+script = ExtResource("1_pf50e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.806238, 0.0860489, 0.361321, 1)
+texture = ExtResource("2_jdo6c")
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_i2sw3")
