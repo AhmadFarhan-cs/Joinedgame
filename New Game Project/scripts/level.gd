@@ -5,6 +5,8 @@ extends Node2D
 const WINSCREEN = preload("res://scenes/winscreen.tscn")
 var levelcomp=false
 
+var switches := 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -23,6 +25,7 @@ func _process(delta) -> void:
 		add_child(win_screen)
 
 func switch() -> void:
+	switches += 1
 	if Playerstates.switched==false:
 		Playerstates.switched= true
 	else:

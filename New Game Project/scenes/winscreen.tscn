@@ -13,7 +13,7 @@ script = ExtResource("1_orw4f")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+[node name="CompleteText" type="RichTextLabel" parent="CanvasLayer"]
 offset_left = 595.0
 offset_top = 198.0
 offset_right = 1240.0
@@ -37,5 +37,17 @@ offset_bottom = 621.0
 theme_override_font_sizes/font_size = 32
 text = "Next"
 
+[node name="SwitchText" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 761.0
+offset_top = 363.0
+offset_right = 938.0
+offset_bottom = 408.0
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 32
+text = "Switches: "
+fit_content = true
+scroll_active = false
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="pressed" from="CanvasLayer/retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="CanvasLayer/next" to="." method="_on_next_pressed"]

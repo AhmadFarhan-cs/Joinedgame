@@ -19,3 +19,8 @@ func _on_retry_pressed():
 
 func _on_next_pressed():
 	Levelmanager.nextlevel()
+
+
+func _enter_tree():
+	var parent = self.get_parent()
+	$CanvasLayer/SwitchText.text = "Switches: " + str(parent.switches)
