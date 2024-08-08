@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://f8g6an3ffpqf"]
+
+[ext_resource type="Script" path="res://scripts/Breakablewall.gd" id="1_kjr5i"]
+[ext_resource type="Texture2D" uid="uid://con7sv51wk2ew" path="res://icon.svg" id="2_n63cu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pg3si"]
+size = Vector2(117, 118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52ysw"]
+size = Vector2(136, 134.5)
+
+[node name="Breakablewall" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_kjr5i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.300526, 0.0172371, 0.137309, 1)
+texture = ExtResource("2_n63cu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_pg3si")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_52ysw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

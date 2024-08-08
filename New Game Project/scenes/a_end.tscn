@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://da2loc0c8cimc"]
+
+[ext_resource type="Script" path="res://scripts/A_end.gd" id="1_w3t0o"]
+[ext_resource type="Texture2D" uid="uid://f5jbuaw2kib1" path="res://assets/blueend.png" id="2_3ktob"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cix3g"]
+radius = 33.0151
+
+[node name="A_end" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_w3t0o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cix3g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_3ktob")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
