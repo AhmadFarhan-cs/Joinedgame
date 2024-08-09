@@ -108,3 +108,5 @@ position = Vector2(56, 200)
 [node name="door" parent="." instance=ExtResource("10_mf2vq")]
 position = Vector2(1065, 304)
 scale = Vector2(1, 12.44)
+A_key = true
+B_key = true
