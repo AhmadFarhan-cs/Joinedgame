@@ -14,7 +14,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) -> void:
-	if Input.is_action_just_pressed("switch"):
+	if Input.is_action_just_pressed("switch") and Playerstates.can_switch == true:
 		var temp = character_a.global_position
 		character_a.global_position=character_b.global_position
 		character_b.global_position = temp
@@ -23,6 +23,8 @@ func _process(delta) -> void:
 		levelcomp = true
 		var win_screen = WINSCREEN.instantiate()
 		add_child(win_screen)
+	if Input.is_action_just_pressed("restart"):
+		Levelmanager.restartlevel()
 
 func switch() -> void:
 	switches += 1

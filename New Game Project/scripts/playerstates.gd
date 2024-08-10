@@ -1,7 +1,7 @@
 extends Node
 
 var switched = false
-
+var can_switch = true
 var A_at_end= false
 
 var B_at_end = false

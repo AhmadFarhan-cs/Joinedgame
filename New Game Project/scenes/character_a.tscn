@@ -17,3 +17,25 @@ texture = ExtResource("2_meyb3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 3.25)
 shape = SubResource("RectangleShape2D_fj7hp")
+
+[node name="up" type="RayCast2D" parent="."]
+position = Vector2(-66, -60)
+rotation = 3.09808
+collision_mask = 4
+
+[node name="up2" type="RayCast2D" parent="."]
+position = Vector2(66, -60)
+rotation = 3.09808
+collision_mask = 4
+
+[node name="down2" type="RayCast2D" parent="."]
+position = Vector2(66, 60)
+rotation = 3.09808
+target_position = Vector2(-0.0842476, -44.0454)
+collision_mask = 4
+
+[node name="down" type="RayCast2D" parent="."]
+position = Vector2(-66, 60)
+rotation = 3.10665
+target_position = Vector2(1.65289, -37.964)
+collision_mask = 4

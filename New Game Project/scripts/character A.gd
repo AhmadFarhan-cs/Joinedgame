@@ -1,6 +1,10 @@
 extends CharacterBody2D
 
 @onready var sprite_2d = $Sprite2D
+@onready var up = $up
+@onready var up_2 = $up2
+@onready var down_2 = $down2
+@onready var down = $down
 
 var candoublejump = true
 const SPEED = 300.0
@@ -8,6 +12,13 @@ var JUMP_VELOCITY = -500.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+func _process(delta):
+	#code that prevent A from switching if they are in a small area
+	if (Playerstates.switched ==false and (up.is_colliding() or  up_2.is_colliding())) or (Playerstates.switched == true and (down.is_colliding() or down_2.is_colliding())):
+		Playerstates.can_switch = false
+	else:
+		Playerstates.can_switch = true
 
 
 func _physics_process(delta):

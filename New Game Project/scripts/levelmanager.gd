@@ -29,4 +29,20 @@ func nextlevel():
 			level = preload("res://scenes/Levels/level_3.tscn")
 			level_id = 3
 			get_tree().change_scene_to_packed(level)
+		3:
+			level = preload("res://scenes/Levels/level_4.tscn")
+			level_id = 4
+			get_tree().change_scene_to_packed(level)
+		4:
+			level= preload("res://scenes/Levels/level_5.tscn")
+			level_id= 5
+			get_tree().change_scene_to_packed(level)
+		5:
+			level= preload("res://scenes/Levels/level_6.tscn")
+			level_id= 6
+			get_tree().change_scene_to_packed(level)
+		6:
+			level= preload("res://scenes/Levels/level_7.tscn")
+			level_id= 7
+			get_tree().change_scene_to_packed(level)
 	Playerstates.reset()
