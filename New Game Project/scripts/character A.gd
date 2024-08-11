@@ -30,9 +30,11 @@ func _physics_process(delta):
 			velocity.y += gravity * delta
 
 		# Handle jump.
+		if is_on_floor():
+			candoublejump = true
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
-			candoublejump = true
+			
 		elif Input.is_action_just_pressed("jump")  and  candoublejump==true:
 			velocity.y = JUMP_VELOCITY
 			candoublejump = false
@@ -45,11 +47,11 @@ func _physics_process(delta):
 		JUMP_VELOCITY = 500
 		if not is_on_ceiling():
 			velocity.y += -(gravity * delta)
-
-	# Handle jump.
+		if is_on_ceiling():
+			candoublejump = true
 		if Input.is_action_just_pressed("jump") and is_on_ceiling():
 			velocity.y = JUMP_VELOCITY
-			candoublejump = true
+			
 		elif Input.is_action_just_pressed("jump")  and  candoublejump==true:
 			velocity.y = JUMP_VELOCITY
 			candoublejump = false
