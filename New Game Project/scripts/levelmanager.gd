@@ -12,7 +12,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("skip"):
+		nextlevel()
 
 func restartlevel():
 	get_tree().change_scene_to_packed(level)
@@ -49,7 +50,7 @@ func nextlevel():
 			level =preload("res://scenes/Levels/level_8.tscn")
 			level_id = 8
 			get_tree().change_scene_to_packed(level)
-		9:
+		8:
 			level =preload("res://scenes/Levels/level_9.tscn")
 			level_id =9 
 			get_tree().change_scene_to_packed(level)
