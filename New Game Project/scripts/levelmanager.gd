@@ -2,7 +2,7 @@ extends Node
 
 var level_id= 1
 
-var level =preload("res://scenes/Levels/testlevel.tscn")
+var level =preload("res://scenes/Levels/level_1.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
