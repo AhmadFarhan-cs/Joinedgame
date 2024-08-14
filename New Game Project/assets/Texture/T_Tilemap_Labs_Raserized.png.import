@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxnlk006pqmgp"
-path="res://.godot/imported/T_Tilemap_Labs.png-90f2a6da408248e111c3a871c5858fc5.ctex"
+uid="uid://b8qq4xqdnnf1o"
+path="res://.godot/imported/T_Tilemap_Labs_Raserized.png-e5734ec07597bb235f709e91f0e57d6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Texture/T_Tilemap_Labs.png"
-dest_files=["res://.godot/imported/T_Tilemap_Labs.png-90f2a6da408248e111c3a871c5858fc5.ctex"]
+source_file="res://assets/Texture/T_Tilemap_Labs_Raserized.png"
+dest_files=["res://.godot/imported/T_Tilemap_Labs_Raserized.png-e5734ec07597bb235f709e91f0e57d6c.ctex"]
 
 [params]
 

@@ -1,18 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmme1c488ssb0"]
+[gd_scene load_steps=10 format=3 uid="uid://bmme1c488ssb0"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_na2wb"]
 [ext_resource type="PackedScene" uid="uid://cvdg3bocn82s6" path="res://scenes/character_a.tscn" id="2_rks5k"]
 [ext_resource type="PackedScene" uid="uid://c6bd1xnmp2ps4" path="res://scenes/character_b.tscn" id="3_whghq"]
+[ext_resource type="Texture2D" uid="uid://con7sv51wk2ew" path="res://icon.svg" id="4_vcn2w"]
 [ext_resource type="PackedScene" uid="uid://f8g6an3ffpqf" path="res://scenes/breakablewall.tscn" id="5_4y1qe"]
 [ext_resource type="PackedScene" uid="uid://da2loc0c8cimc" path="res://scenes/a_end.tscn" id="6_0p6w8"]
 [ext_resource type="PackedScene" uid="uid://7fewsuuw6lnt" path="res://scenes/b_end.tscn" id="7_7twp1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mcywx"]
+texture = ExtResource("4_vcn2w")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
@@ -20,10 +21,8 @@ texture_region_size = Vector2i(32, 32)
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
 3:0/0 = 0
-3:0/0/modulate = Color(0.702181, 0.108923, 0.208392, 1)
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 0:1/0 = 0
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
