@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://7de7wnbtj5di"]
+
+[ext_resource type="AudioStream" uid="uid://bfxdpd4ff0uc3" path="res://assets/Sounds/Effects/8-12-24_TestJam1_SFX_TP1.wav" id="1_gm4ct"]
+
+[node name="SwitchSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_gm4ct")

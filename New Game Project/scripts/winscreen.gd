@@ -18,7 +18,7 @@ func _on_retry_pressed():
 
 
 func _on_next_pressed():
-	Levelmanager.nextlevel()
+	Levelmanager.nextlevel(self)
 
 
 func _enter_tree():

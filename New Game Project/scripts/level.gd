@@ -3,7 +3,10 @@ extends Node2D
 @onready var character_a = $"character A"
 @onready var character_b = $"Character B"
 const WINSCREEN = preload("res://scenes/winscreen.tscn")
+const switch_sound = preload("res://scenes/switch_sound.tscn")
 var levelcomp=false
+
+var random = RandomNumberGenerator.new()
 
 var switches := 0
 
@@ -32,3 +35,6 @@ func switch() -> void:
 		Playerstates.switched= true
 	else:
 		Playerstates.switched= false
+	var streamPlayer = switch_sound.instantiate()
+	add_child(streamPlayer)
+	$SwitchSound.playing = true
